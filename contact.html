@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us | Simply Sorted Specialist Cleaning</title>
+<meta name="description" content="Get in touch with Simply Sorted Specialist Cleaning in Basingstoke. We typically respond within 24 hours during office hours.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px;">
+      <span class="logo-mark">🧹</span>
+      <div class="logo-text">
+        <span class="logo-name">Simply Sorted</span>
+        <span class="logo-sub">Specialist Cleaning</span>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="services.html" data-nav="services">Services</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:07852734735" class="icon-btn" aria-label="Call">📞</a>
+      <a href="quote.html" class="btn btn-primary header-cta" style="padding:.55rem 1.3rem;font-size:13px;">Get a Free Quote →</a>
+      <button class="icon-btn menu-toggle" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')" style="background:none;border:none;cursor:pointer;">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="quote.html">Get a Free Quote</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you. Get in touch and we'll get back to you as soon as possible.</p>
+  </div>
+</section>
+
+<main>
+
+<section>
+  <div class="wrap">
+    <div style="display:grid;gap:40px;grid-template-columns:1fr;max-width:1000px;margin:0 auto;">
+
+      <!--
+        TEMPORARY FORM BACKEND: this posts as a plain-text email via mailto so it works
+        today with zero setup. Swap the form's action to your Formspree endpoint
+        (https://formspree.io/f/xxxxxxx) once one exists — no other markup changes needed.
+      -->
+      <form class="form-card" action="mailto:info@simplysortedspecialistcleaning.co.uk" method="post" enctype="text/plain">
+        <div class="form-two-col">
+          <div class="form-row"><label for="c-name">Full Name*</label><input id="c-name" name="Full Name" type="text" required></div>
+          <div class="form-row"><label for="c-email">Email*</label><input id="c-email" name="Email" type="email" required></div>
+        </div>
+        <div class="form-two-col">
+          <div class="form-row"><label for="c-phone">Phone</label><input id="c-phone" name="Phone" type="tel"></div>
+          <div class="form-row">
+            <label for="c-service">Service Interested In</label>
+            <select id="c-service" name="Service">
+              <option value="">Select a service (optional)</option>
+              <option>Regular Cleaning</option>
+              <option>Deep Cleaning</option>
+              <option>Decluttering &amp; Organisation</option>
+              <option>Carpet Cleaning</option>
+              <option>Mental Health Support Cleaning</option>
+              <option>End of Tenancy Cleaning</option>
+              <option>Post Builder Cleaning</option>
+              <option>Commercial Cleaning</option>
+              <option>Airbnb / Short Term Rental</option>
+              <option>Laundry Services</option>
+              <option>Biohazard &amp; Trauma Cleaning</option>
+              <option>Other / Not sure</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row"><label for="c-message">Message*</label><textarea id="c-message" name="Message" required></textarea></div>
+        <button type="submit" class="btn btn-primary btn-block" style="background-color:rgb(250,204,21);color:#fff;">Send Message</button>
+        <p class="form-note">We typically respond within 24 hours during office hours (Mon to Fri, 9am to 3pm).</p>
+      </form>
+
+      <div style="text-align:center;">
+        <div class="mini-stats" style="justify-content:center;">
+          <span class="mini-stat">📞 <a href="tel:07852734735" style="color:inherit;">07852 734735</a></span>
+          <span class="mini-stat">✉️ <a href="mailto:info@simplysortedspecialistcleaning.co.uk" style="color:inherit;">info@simplysortedspecialistcleaning.co.uk</a></span>
+          <span class="mini-stat">💬 WhatsApp: 07852 734735</span>
+        </div>
+        <p style="margin-top:14px;font-size:14px;color:rgba(41,37,36,.65);">Office Hours: Monday to Friday, 9:00am to 3:00pm · Basingstoke, Hampshire — serving Basingstoke and surrounding areas</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span class="logo-mark">🧹</span>
+          <div class="logo-text">
+            <span class="logo-name" style="color:#fff;">Simply Sorted</span>
+            <span class="logo-sub" style="opacity:.6;">Specialist Cleaning</span>
+          </div>
+        </div>
+        <p>No judgement. No stress. Just solutions. Specialist cleaning for Basingstoke and the surrounding area.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="quote.html">Get a Free Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Regular Cleaning</a></li>
+          <li><a href="services.html">Deep Cleaning</a></li>
+          <li><a href="services.html">End of Tenancy</a></li>
+          <li><a href="services.html">Biohazard &amp; Trauma</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul>
+          <li>📞 <a href="tel:07852734735">07852 734735</a></li>
+          <li>✉️ <a href="mailto:info@simplysortedspecialistcleaning.co.uk">info@simplysortedspecialistcleaning.co.uk</a></li>
+          <li>Mon–Fri, 9am–3pm</li>
+          <li>Basingstoke, Hampshire</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Simply Sorted Specialist Cleaning. All rights reserved.</span>
+      <span>Basingstoke, Hampshire</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var page = location.pathname.split('/').pop() || 'index.html';
+  var map = {'index.html':'home','about.html':'about','services.html':'services','contact.html':'contact','quote.html':'quote'};
+  var current = map[page];
+  document.querySelectorAll('.main-nav a[data-nav]').forEach(function(a){
+    if (a.getAttribute('data-nav') === current) a.classList.add('active');
+  });
+})();
+</script>
+</body>
+</html>

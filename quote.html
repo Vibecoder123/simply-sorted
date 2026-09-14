@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get a Free Quote | Simply Sorted Specialist Cleaning</title>
+<meta name="description" content="Fill in the form and we'll get back to you with a tailored, no-obligation quote within 24 hours.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px;">
+      <span class="logo-mark">🧹</span>
+      <div class="logo-text">
+        <span class="logo-name">Simply Sorted</span>
+        <span class="logo-sub">Specialist Cleaning</span>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="services.html" data-nav="services">Services</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:07852734735" class="icon-btn" aria-label="Call">📞</a>
+      <a href="quote.html" class="btn btn-primary header-cta" style="padding:.55rem 1.3rem;font-size:13px;">Get a Free Quote →</a>
+      <button class="icon-btn menu-toggle" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')" style="background:none;border:none;cursor:pointer;">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="quote.html">Get a Free Quote</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="badge" style="background:rgba(250,204,22,.15);border-color:rgba(250,204,22,.4);">⏱️ Quick response guaranteed</span>
+    <h1>Get a Free Quote</h1>
+    <p>Fill in the form below and we'll get back to you with a tailored, no-obligation quote within 24 hours.</p>
+  </div>
+</section>
+
+<main>
+
+<section>
+  <div class="wrap">
+    <!--
+      TEMPORARY FORM BACKEND: mailto fallback, same as contact.html — swap the
+      action to a Formspree endpoint once one exists.
+    -->
+    <form class="form-card" action="mailto:info@simplysortedspecialistcleaning.co.uk" method="post" enctype="text/plain">
+      <div class="form-two-col">
+        <div class="form-row"><label for="q-name">Full Name*</label><input id="q-name" name="Full Name" type="text" required></div>
+        <div class="form-row"><label for="q-email">Email*</label><input id="q-email" name="Email" type="email" required></div>
+      </div>
+      <div class="form-two-col">
+        <div class="form-row"><label for="q-phone">Phone*</label><input id="q-phone" name="Phone" type="tel" required></div>
+        <div class="form-row">
+          <label for="q-service">Service Required*</label>
+          <select id="q-service" name="Service" required>
+            <option value="">Select a service</option>
+            <option>Regular Cleaning</option>
+            <option>Deep Cleaning</option>
+            <option>Decluttering &amp; Organisation</option>
+            <option>Carpet Cleaning</option>
+            <option>Mental Health Support Cleaning</option>
+            <option>End of Tenancy Cleaning</option>
+            <option>Post Builder Cleaning</option>
+            <option>Commercial Cleaning</option>
+            <option>Airbnb / Short Term Rental</option>
+            <option>Laundry Services</option>
+            <option>Biohazard &amp; Trauma Cleaning</option>
+            <option>Not sure, need advice</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-two-col">
+        <div class="form-row">
+          <label for="q-type">Property Type</label>
+          <select id="q-type" name="Property Type">
+            <option value="">Select (optional)</option>
+            <option>House</option>
+            <option>Flat / Apartment</option>
+            <option>Office</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="q-size">Approximate Size</label>
+          <select id="q-size" name="Size">
+            <option value="">Select (optional)</option>
+            <option>Studio / 1 bed</option>
+            <option>2 bed</option>
+            <option>3 bed</option>
+            <option>4 bed</option>
+            <option>5+ bed</option>
+            <option>Large commercial or other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-two-col">
+        <div class="form-row"><label for="q-date">Preferred Date</label><input id="q-date" name="Preferred Date" type="date"></div>
+        <div class="form-row"><label for="q-notes">Additional Notes</label><input id="q-notes" name="Notes" type="text"></div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block" style="background-color:rgb(250,204,21);color:#fff;">Request My Free Quote</button>
+      <p class="form-note">No obligation. We'll get back to you within 24 hours during office hours (Mon to Fri, 9am to 3pm). Prefer to talk? Call or WhatsApp 07852 734735.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span class="logo-mark">🧹</span>
+          <div class="logo-text">
+            <span class="logo-name" style="color:#fff;">Simply Sorted</span>
+            <span class="logo-sub" style="opacity:.6;">Specialist Cleaning</span>
+          </div>
+        </div>
+        <p>No judgement. No stress. Just solutions. Specialist cleaning for Basingstoke and the surrounding area.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="quote.html">Get a Free Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Regular Cleaning</a></li>
+          <li><a href="services.html">Deep Cleaning</a></li>
+          <li><a href="services.html">End of Tenancy</a></li>
+          <li><a href="services.html">Biohazard &amp; Trauma</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul>
+          <li>📞 <a href="tel:07852734735">07852 734735</a></li>
+          <li>✉️ <a href="mailto:info@simplysortedspecialistcleaning.co.uk">info@simplysortedspecialistcleaning.co.uk</a></li>
+          <li>Mon–Fri, 9am–3pm</li>
+          <li>Basingstoke, Hampshire</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Simply Sorted Specialist Cleaning. All rights reserved.</span>
+      <span>Basingstoke, Hampshire</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var page = location.pathname.split('/').pop() || 'index.html';
+  var map = {'index.html':'home','about.html':'about','services.html':'services','contact.html':'contact','quote.html':'quote'};
+  var current = map[page];
+  document.querySelectorAll('.main-nav a[data-nav]').forEach(function(a){
+    if (a.getAttribute('data-nav') === current) a.classList.add('active');
+  });
+})();
+</script>
+</body>
+</html>
