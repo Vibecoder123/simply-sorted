@@ -52,16 +52,13 @@
   <div class="wrap">
     <div style="display:grid;gap:40px;grid-template-columns:1fr;max-width:1000px;margin:0 auto;">
 
-      <!--
-        TEMPORARY FORM BACKEND: this posts as a plain-text email via mailto so it works
-        today with zero setup. Swap the form's action to your Formspree endpoint
-        (https://formspree.io/f/xxxxxxx) once one exists — no other markup changes needed.
-      -->
-      <form class="form-card" action="https://formspree.io/f/mqpkvrjp" method="post" enctype="text/plain">
-        <div class="form-two-col">
-          <div class="form-row"><label for="c-name">Full Name*</label><input id="c-name" name="Full Name" type="text" required></div>
-          <div class="form-row"><label for="c-email">Email*</label><input id="c-email" name="Email" type="email" required></div>
-        </div>
+      <form class="form-card" action="https://formspree.io/f/mqpkvrjp" method="POST">
+  <input type="hidden" name="_subject" value="New Contact Form Submission — Simply Sorted">
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+  <div class="form-two-col">
+    <div class="form-row"><label for="c-name">Full Name*</label><input id="c-name" name="name" type="text" required></div>
+    <div class="form-row"><label for="c-email">Email*</label><input id="c-email" name="email" type="email" required></div>
+  </div>
         <div class="form-two-col">
           <div class="form-row"><label for="c-phone">Phone</label><input id="c-phone" name="Phone" type="tel"></div>
           <div class="form-row">
