@@ -52,7 +52,9 @@
 <section>
   <div class="wrap">
    
-    <form class="form-card" action="https://formspree.io/f/mqpkvrjp" method="POST">
+    <div data-fs-success>&#10003;&nbsp; Thanks — we'll be in touch soon.</div>
+<div data-fs-error></div>
+<form id="quote-form" class="form-card" action="https://formspree.io/f/mqpkvrjp" method="POST">
   <input type="hidden" name="_subject" value="New Quote Request — Simply Sorted">
   <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
   <div class="form-two-col">
@@ -175,5 +177,14 @@
   });
 })();
 </script>
+<script>
+  window.formspree =
+    window.formspree ||
+    function () {
+      (formspree.q = formspree.q || []).push(arguments);
+    };
+  formspree('initForm', { formElement: '#quote-form', formId: 'mqpkvrjp' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
