@@ -62,6 +62,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  display: block;
 }
 /* --- Hero (Option B, personality-led) --- */
   .hero{
