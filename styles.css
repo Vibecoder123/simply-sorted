@@ -117,13 +117,12 @@ body {
    or with whatever's left of the old .hero rules if you haven't
    deleted them yet. */
 
-.hero-photo{
-  position:relative;
-  min-height:560px;
-  height:78vh;
-  max-height:820px;
-  display:flex;
-  align-items:center;
+.hero-photo {
+  position: relative;
+  margin-top: 64px;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
   background-image:
     linear-gradient(90deg,
       rgba(41,52,54,0.97) 0%,
@@ -132,7 +131,7 @@ body {
     url('images/hero-van.jpg');
   background-color: #293436;
   background-size: cover, cover;
-  background-position: left center, right 42%;
+  background-position: left center, right 30%;
   background-repeat: no-repeat, no-repeat;
 }
 
