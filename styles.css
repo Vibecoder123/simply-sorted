@@ -66,7 +66,7 @@ body {
 }
 /* --- Hero (Option B, personality-led) --- */
   .hero{
-    --hero-dark:#030712;
+    --hero-dark:#293436;
     --hero-brand:#FACC16;
     background:var(--hero-dark);
     max-width:1200px;
