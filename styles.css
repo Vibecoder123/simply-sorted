@@ -129,7 +129,7 @@ body {
       rgba(41,52,54,0) 50%),
     url('images/hero-van.jpg');
   background-size: cover, cover;
-  background-position: left center, center 42%;
+  background-position: left left, left 42%;
   background-repeat: no-repeat, no-repeat;
   display:flex;
   align-items:center;
