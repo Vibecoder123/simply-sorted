@@ -122,16 +122,18 @@ body {
   min-height:560px;
   height:78vh;
   max-height:820px;
+  display:flex;
+  align-items:center;
   background-image:
-  linear-gradient(90deg,
-    rgba(41,52,54,0.97) 0%,
-    rgba(41,52,54,0.97) 30%,
-    rgba(41,52,54,0) 50%),
-  url('images/hero-van.jpg');
-background-color: #293436;
-background-size: cover, 79% auto;
-background-position: left center, left 42%;
-background-repeat: no-repeat, no-repeat;
+    linear-gradient(90deg,
+      rgba(41,52,54,0.97) 0%,
+      rgba(41,52,54,0.97) 30%,
+      rgba(41,52,54,0) 50%),
+    url('images/hero-van.jpg');
+  background-color: #293436;
+  background-size: cover, cover;
+  background-position: left center, right 42%;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .hero-photo .text-col{
