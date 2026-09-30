@@ -120,8 +120,7 @@ body {
 .hero-photo {
   position: relative;
   margin-top: 64px;
-  min-height: calc(100vh - 64px);
-  max-height: 900px;
+  min-height: min(calc(100vh - 64px), 900px);
   padding-bottom: 190px;
   display: flex;
   align-items: center;
@@ -167,6 +166,34 @@ body {
   .hero-photo .text-col{max-width:none; padding:0 24px; text-align:left;}
   .hero-photo h1{font-size:30px;}
 }
+
+/* --- Hero review cards --- */
+.hero-reviews {
+  position: absolute;
+  right: 30px;
+  bottom: 24px;
+  display: flex;
+  gap: clamp(24px, 6.6vw, 127px);
+  align-items: stretch;
+}
+.hero-review {
+  width: clamp(300px, 27.9vw, 535px);
+  background: rgba(20,26,34,.92);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  padding: 20px 24px;
+  color: #F5F5F4;
+  backdrop-filter: blur(6px);
+}
+.hero-review .stars { color: #FACC16; font-size: 18px; letter-spacing: 3px; line-height: 1; }
+.hero-review blockquote { margin-top: 12px; font-size: clamp(15px, 1vw, 19px); font-weight: 600; line-height: 1.45; }
+.hero-review blockquote::before { content: "\201C"; }
+.hero-review blockquote::after { content: "\201D"; }
+.hero-review figcaption { margin-top: 10px; font-size: 14px; color: rgba(245,245,244,.6); }
+
+@media (max-width: 1599px) { .hero-review--helen { display: none; } }
+@media (max-height: 800px) { .hero-review--helen { display: none; } }
+@media (max-width: 899px)  { .hero-reviews { display: none; } }
 
 /* ================= NAV ================= */
 .header-inner { position: relative; }
