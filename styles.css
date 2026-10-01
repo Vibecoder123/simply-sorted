@@ -121,7 +121,7 @@ body {
   position: relative;
   margin-top: 64px;
   min-height: min(calc(100vh - 64px), 900px);
-  padding-bottom: 190px;
+  padding: 0 0 118px;
   display: flex;
   align-items: center;
   background-image:
@@ -168,6 +168,19 @@ body {
 }
 
 /* --- Hero review cards --- */
+@property --a { syntax: "<angle>"; inherits: true; initial-value: 0deg; }
+@keyframes review-spin {
+  0%{--a:0deg} 2.5%{--a:22deg} 5%{--a:39deg} 7.5%{--a:50deg} 10%{--a:58deg}
+  12.5%{--a:63deg} 15%{--a:67deg} 17.5%{--a:70deg} 20%{--a:75deg} 22.5%{--a:82deg}
+  25%{--a:90deg} 27.5%{--a:98deg} 30%{--a:105deg} 32.5%{--a:110deg} 35%{--a:113deg}
+  37.5%{--a:117deg} 40%{--a:122deg} 42.5%{--a:130deg} 45%{--a:141deg} 47.5%{--a:158deg}
+  50%{--a:180deg} 52.5%{--a:202deg} 55%{--a:219deg} 57.5%{--a:230deg} 60%{--a:238deg}
+  62.5%{--a:243deg} 65%{--a:247deg} 67.5%{--a:250deg} 70%{--a:255deg} 72.5%{--a:262deg}
+  75%{--a:270deg} 77.5%{--a:278deg} 80%{--a:285deg} 82.5%{--a:290deg} 85%{--a:293deg}
+  87.5%{--a:297deg} 90%{--a:302deg} 92.5%{--a:310deg} 95%{--a:321deg} 97.5%{--a:338deg}
+  100%{--a:360deg}
+}
+
 .hero-reviews {
   position: absolute;
   right: 30px;
@@ -175,25 +188,48 @@ body {
   display: flex;
   gap: clamp(24px, 6.6vw, 127px);
   align-items: stretch;
+  isolation: isolate;
 }
 .hero-review {
+  position: relative;
   width: clamp(300px, 27.9vw, 535px);
-  background: rgba(20,26,34,.92);
-  border: 1px solid rgba(255,255,255,.08);
+  border: 2px solid transparent;
   border-radius: 12px;
-  padding: 20px 24px;
+  padding: 18px 22px;
   color: #F5F5F4;
-  backdrop-filter: blur(6px);
+  background:
+    linear-gradient(#141a22, #141a22) padding-box,
+    conic-gradient(from var(--a, 0deg),
+      rgba(250,204,22,0) 0deg, rgba(250,204,22,0) 180deg,
+      rgba(250,204,22,.18) 250deg, rgba(250,204,22,.6) 320deg,
+      #FACC16 352deg, #FFF3B0 360deg) border-box,
+    linear-gradient(rgba(255,255,255,.12), rgba(255,255,255,.12)) border-box;
+  box-shadow: 0 -10px 28px rgba(0,0,0,.5);
+  animation: review-spin 12s linear infinite;
+}
+.hero-review::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(from var(--a, 0deg),
+    rgba(250,204,22,0) 0deg, rgba(250,204,22,0) 180deg,
+    rgba(250,204,22,.3) 280deg, rgba(250,204,22,.9) 360deg);
+  filter: blur(18px);
+  opacity: .9;
 }
 .hero-review .stars { color: #FACC16; font-size: 18px; letter-spacing: 3px; line-height: 1; }
 .hero-review blockquote { margin-top: 12px; font-size: clamp(15px, 1vw, 19px); font-weight: 600; line-height: 1.45; }
 .hero-review blockquote::before { content: "\201C"; }
 .hero-review blockquote::after { content: "\201D"; }
 .hero-review figcaption { margin-top: 10px; font-size: 14px; color: rgba(245,245,244,.6); }
+.hero-review--helen { animation-delay: -6s; }
 
-@media (max-width: 1599px) { .hero-review--helen { display: none; } }
-@media (max-height: 800px) { .hero-review--helen { display: none; } }
+@media (max-width: 1399px) { .hero-review--helen { display: none; } }
+@media (max-height: 620px) { .hero-review--helen { display: none; } }
 @media (max-width: 899px)  { .hero-reviews { display: none; } }
+@media (prefers-reduced-motion: reduce) { .hero-review { animation: none; } }
 
 /* ================= NAV ================= */
 .header-inner { position: relative; }
