@@ -77,7 +77,7 @@ body {
 }
 
 /* ---- credentials: stats row + scrolling badge strip ---- */
-.stats { background: var(--brand-dark); padding: 56px 0 52px; }
+.stats { background: var(--brand-dark-light); padding: 56px 0 52px; }
 .stats-grid {
   max-width: 1416px; margin: 0 auto; padding: 0 24px;
   display: grid; grid-template-columns: repeat(4, 1fr);
