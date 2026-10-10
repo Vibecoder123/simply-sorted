@@ -1,0 +1,20 @@
+# Wix-era pages Google still has indexed
+/contact-4                  /contact                 301
+/services-4                 /services                301
+
+# Dropped pages
+/faq                        /services                301
+
+# Old Basingstoke area page, must stay above the /areas/:town rule
+/areas/basingstoke          /basingstoke             301
+
+# Every other old town page goes to the Areas page
+/areas/:town                /areas                   301
+
+# Old service-in-town pages go to the service page
+/services/:service/:town    /services/:service       301
+
+# LAUNCH TODO: Education Hub review not done yet.
+# Before launch, replace the catch-all below. Kept articles must exist at
+# their old addresses. Dropped articles get their own redirect line ABOVE it.
+/education-hub/*            /education-hub           301   
