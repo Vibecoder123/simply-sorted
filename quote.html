@@ -54,8 +54,8 @@
 <section>
   <div class="wrap">
    
-    <div data-fs-success>&#10003;&nbsp; Thanks — we'll be in touch soon.</div>
-<div data-fs-error></div>
+    <div data-fs-success role="status">&#10003;&nbsp; Thanks — we'll be in touch soon.</div>
+<div data-fs-error role="alert"></div>
 <form id="quote-form" class="form-card" action="https://formspree.io/f/mqpkvrjp" method="POST">
   <input type="hidden" name="_subject" value="New Quote Request — Simply Sorted">
   <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
@@ -194,7 +194,24 @@
     function () {
       (formspree.q = formspree.q || []).push(arguments);
     };
-  formspree('initForm', { formElement: '#quote-form', formId: 'mqpkvrjp' });
+    // After submitting, bring the success or error message into view
+  // so the visitor isn't left looking at an empty form.
+  function showFormMessage() {
+    var msg = document.querySelector('[data-fs-success][data-fs-active], [data-fs-error][data-fs-active]');
+    if (!msg) return;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    msg.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+  }
+  formspree('initForm', {
+    formElement: '#quote-form',
+    formId: 'mqpkvrjp',
+    onSuccess: function (context) {
+      context.form.reset();
+      showFormMessage();
+    },
+    onError: showFormMessage,
+    onFailure: showFormMessage
+  });
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
