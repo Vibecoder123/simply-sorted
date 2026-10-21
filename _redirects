@@ -12,9 +12,11 @@
 /areas/:town                /areas                   301
 
 # Old service-in-town pages go to the service page
-/services/:service/:town    /services/:service       301
+/services/:service/:town    /services                302
+/services/:service          /services                302
 
 # LAUNCH TODO: Education Hub review not done yet.
 # Before launch, replace the catch-all below. Kept articles must exist at
 # their old addresses. Dropped articles get their own redirect line ABOVE it.
-/education-hub/*            /education-hub           301   
+/education-hub              /                        302
+/education-hub/*            /                        302  
