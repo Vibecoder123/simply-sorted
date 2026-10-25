@@ -13,7 +13,19 @@
 
 # Old service-in-town pages go to the service page
 /services/:service/:town    /services                302
-/services/:service          /services                302
+# Old service pages not rebuilt yet. Delete each line when its page goes live.
+# (A redirect always beats a real page on Cloudflare Pages.)
+/services/regular-cleaning                  /services                302
+/services/deep-cleaning                     /services                302
+/services/decluttering-organisation         /services                302
+/services/carpet-cleaning                   /services                302
+/services/mental-health-support-cleaning    /services                302
+/services/end-of-tenancy-cleaning           /services                302
+/services/post-builder-cleaning             /services                302
+/services/commercial-cleaning               /services                302
+/services/airbnb-changeover                 /services                302
+/services/laundry-services                  /services                302
+/services/biohazard-trauma-cleaning         /services                302
 
 # LAUNCH TODO: Education Hub review not done yet.
 # Before launch, replace the catch-all below. Kept articles must exist at
