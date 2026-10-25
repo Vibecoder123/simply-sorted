@@ -338,8 +338,17 @@ h2.section-title { font-size: 32px; font-weight: 700; line-height: 1.2; margin-b
 .mini-stat { font-size: 13px; font-weight: 600; color: rgba(41,37,36,.7); }
 
 /* ================= HOW IT WORKS ================= */
-.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
-.step { text-align: left; }
+.steps-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+.step { text-align: left; position: relative; padding-left: 52px; }
+.step .step-num { position: absolute; left: 0; top: 0; z-index: 1; }
+/* Gold line linking each step number to the next: vertical on mobile, horizontal on desktop */
+.step:not(:last-child)::after { content: ""; position: absolute; background: #ca8a04; left: 13.5px; top: 30px; bottom: -30px; width: 5px; }
+@media (min-width: 900px) {
+  .steps-grid { grid-auto-flow: column; grid-auto-columns: 1fr; }
+  .step { padding-left: 0; }
+  .step .step-num { position: relative; }
+  .step:not(:last-child)::after { left: 30px; top: 13.5px; bottom: auto; width: 100%; height: 5px; }
+}
 .step-num {
   font-size: 13px; font-weight: 700; color: var(--brand-dark);
   background: var(--brand-primary); width: 32px; height: 32px; border-radius: 50%;
